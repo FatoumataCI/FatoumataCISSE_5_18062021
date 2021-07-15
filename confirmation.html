@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--lien feuile de style-->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+
+<!--lien bootstraap-->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!--lien font awesome-->
+
+  <script src="https://kit.fontawesome.com/f7216a59cb.js" crossorigin="anonymous"></script>
+  <title>Confirmation</title>
+</head>
+
+<body>
+
+<!--header-->
+
+<header>
+    <div class="container-fluid-nav">
+        <nav class="col navbar navbar-expand d-flex justify-content-around">
+            <a class="navbar-brand" href="index.html"></i> Orinoco</a>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="panier.html"></i> Panier (<span id="Numberarticle"></span>)</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--main-->
+
+<main class="Mainconfirmation">
+    <div class="container" id="Containerconfirmation">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center" id="h1confirmation"> CONFIRMATION DE VOTRE COMMANNDE !</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <!--confirmation commande & remerciements-->
+
+                <div id="Sectionconfirmation">
+                    <p>Votre commande est passée avec succès!</p>
+                    <p><strong> Merci pour votre commande <span id="Namecommande"></span>.</strong></p><br>
+                    <p><strong>TOTAL COMMANDE : </strong><span id="Prixcommande"></span> euros.</p><br>
+                    <p>Votre commande est en cours de traitement.<strong>Elle est en cours de préparation par nos services!</strong></p>
+                    <p>Nous avons le plaisir de vous confirmer que votre commande a été expédié! Nous vous informerons par e-mail le cheminement de votre commande</p>
+                         <strong>commande n° <span id="Idcommande"></strong></span></p><br>
+
+                    <p>Merci de nous avoir accorder votre confiance <br> L'équipe Orinoco</p>
+                </div>
+            </div>
+        </div>
+    </div>     
+</main>
+    <footer id="footer" class="container-fluid mt-auto bg-orinoco">
+        <div class="row p-2 my-1">
+          <div class="col-12">
+            <div class="text-center my-auto">
+    
+            <!--infos entreprise-->
+
+              <a href="#" class="text-decoration-none text-body">À propos de nous</a>
+              <span class="mx-2">.</span>
+              <a href="#" class="text-decoration-none text-body">Confidentialité</a>
+              <span class="mx-2">.</span>
+              <a href="#" class="text-decoration-none text-body">Conditions Générales</a>
+            </div>
+          </div>
+      </footer>
+    </body>
+    
+    </html>
