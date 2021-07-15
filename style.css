@@ -1,0 +1,71 @@
+
+body{
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    background: #f3e9f1;
+}
+ 
+.bg-orinoco {
+    background: #f3e9f1;
+}
+.container{
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+}
+ 
+*{
+    box-sizing: border-box;
+}
+ 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*header*/
+ 
+
+
+/*main*/
+
+.bears {
+    display: flex;
+}
+
+h1{
+    text-align: center;
+    font-size: 19px;
+    margin: 0;
+}
+
+.cards{
+    height: auto;    
+}
+
+.cards a{
+    display: flex;
+    padding: 8px;
+    height: 100%;
+}
+
+.cards img{
+    width: 300px;
+    padding: 8px;
+}
+
+.details{
+    padding: 10px;
+    text-align: center;
+}
+
+h2{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+
