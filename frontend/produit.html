@@ -28,75 +28,65 @@
     <!--header-->
 
     <header>
-        <div class="container-fluid-nav">
-            <nav class="col navbar navbar-expand d-flex justify-content-around">
-                <a class="navbar-brand" href="index.html"></i> Orinoco</a>
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="panier.html"></i> Panier (<span id="Numberarticle"></span>)</a>
-                </ul>
-            </nav>
+
+      <nav class="navbar navbar-light bg-orinoco">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src= "img/logo orinoco.png" alt="Photo logo Orinoco" width="200" height="100"
+            class=" w-100 d-inline-block align-text-top">
+          </a>
+          <nav class="navbar navbar-light bg-orinoco">
+            <form class="container-fluid justify-content-start">
+              <div class="btn-group">
+                <a href="index.html" class="btn btn-primary active" aria-current="page">Accueil</a>
+                <a href="panier.html" class="btn btn-primary">Panier</a>
+              </div> 
+            </form>
+          </nav>
         </div>
+      </nav>
     </header>
 
     <!--main-->
+    <main class="main__produit">
 
-    <main class="Mainproduit">
-        <div class="container">
-            <div class="mt-4 alert bg-orinoco alert-dismissible fade show" role="alert">
-                <strong class="ajoutpanierok">panier</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <div class="row">
-                <div class="col">
-                    <div id="Selectionproduit"></div>
-                </div>
+      <h2 class="title">Produit en stock</h2>
+      <article class="produit">
+        <img class="produit__img" src="" alt="Teddy bears">
+        <div>
+          <h3 class="produit__name"></h3>
+          <p class="produit__description"></p>
+          <p>Prix à l'unité : <span class="produit__price"></span>€</p>
+            <div id="myForm">
+              <label for="colors">Choississez votre couleur</label>
+              <select name="colors" id="colors" class="produit__choice" form="myForm"></select>
+              <br>
+              <label for="inputNumber">Indiquez la quantité souhaitée </label>
+              <input name="inputNumber" id="inputNumber" type="number" min="0" max="20" placeholder="0" onchange="totalPrice(value)">
+              <button id="submitBtn">Ajoutez au panier</button>
             </div>
-            <div class="row">
-                <div class="col">
-                    <div id="Quantité">
-                        <label for="Nombre" id="Quantitéproduit">Quantité</label><br />
-                        <select name="Nombre" id="Nombre" onchange="selectNbreArticle()">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button type="button" class="btn btn-outline-primary" id="Boutonpanier" onclick="ajouterAuPanier()">Ajouter au panier</button>
-                </div>
-            </div>
+            <p>Prix total: <span class="produit__total">0</span>€</p>
         </div>
+      </article>
     </main>
+            
+    <!--footer-->
 
-      <!--footer-->
-
-      <footer id="footer" class="container-fluid mt-auto bg-orinoco">
-        <div class="row p-2 my-1">
-          <div class="col-12">
-            <div class="text-center my-auto">
-
-                <!--infos entreprise-->
-    
-              <a href="#" class="text-decoration-none text-body">À propos de nous</a>
-              <span class="mx-2">.</span>
-              <a href="#" class="text-decoration-none text-body">Confidentialité</a>
-              <span class="mx-2">.</span>
-              <a href="#" class="text-decoration-none text-body">Conditions Générales</a>
-            </div>
+    <footer id="footer" class="container-fluid mt-auto bg-orinoco">
+      <div class="row p-2 my-1">
+        <div class="col-12">
+          <div class="text-center my-auto">
+             <!--infos entreprise-->
+            <a href="#" class="text-decoration-none text-body">À propos de nous</a>
+            <span class="mx-2">.</span>
+            <a href="#" class="text-decoration-none text-body">Confidentialité</a>
+            <span class="mx-2">.</span>
+            <a href="#" class="text-decoration-none text-body">Conditions Générales</a>
           </div>
-      </footer>
+        </div>
+      </div>
+    </footer>
 
+<script src="JS/produit.js"></script>   
 </body>
-
 </html>
