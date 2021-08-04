@@ -25,140 +25,184 @@
 
 <body>
 
-     <!--header-->
+  <!--header-->
 
-     <header>
-        <div class="container-fluid-nav">
-            <nav class="col navbar navbar-expand d-flex justify-content-around">
-                <a class="navbar-brand" href="index.html"></i> Orinoco</a>
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="panier.html"></i> Panier (<span id="Numberarticle"></span>)</a>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
 
-    <!--main-->
+    <nav class="navbar navbar-light bg-orinoco">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src= "img/logo orinoco.png" alt="Photo logo Orinoco" width="200" height="100" class=" w-100 d-inline-block align-text-top">
+        </a>
+        <nav class="navbar navbar-light bg-orinoco">
+          <form class="container-fluid justify-content-start">
+            <div class="btn-group">
+              <a href="index.html" class="btn btn-primary active" aria-current="page">Accueil</a>
+              <a href="panier.html" class="btn btn-primary">Panier</a>
+            </div> 
+          </form>
+        </nav>
+      </div>
+    </nav>
+  </header>
 
-    <main class="Mainpanier">
-        <div class="container" id="panier">
-            <div class="row">
-                <div class="col">
-                    <h1 class="text-center">Votre panier</h1>
-                </div>
-            </div>
-            <div class="alert bg-orinoco alert-dismissible fade show" role="alert">
-                <strong class="errors"></strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <div class="row text-center" id="mainform">
-                <div class="col" id="leftform">
+  <!--main-->
+  <!--essaie-->
 
-                    <div id="Sectionpanier">
-                        
-                        <table class="table">
+  <main>
 
-                            <!--affichage du panier-->
+    <div class="title"><h2>VOTRE PANIER <i class="fas fa-shopping-cart" aria-hidden="true"></i></h2></div>
 
-                            <thead>
-                                <tr>
-                                  <th scope="col">#</th>
-                                  <th scope="col">Nom</th>
-                                  <th scope="col">Lense</th>
-                                  <th scope="col">Quantité</th>
-                                  <th scope="col">Prix</th>
-                                  <th scope="col">&#10008;</th>
-                                </tr>
-
-                                <tbody class="Rowsarticle">
-                                </tbody>
-                                <tfoot>
-                                    <th class="tableauFooterLigne" colspan="4">Prix total: 0 euros</th></tfoot>
-                              </thead>
-                        </table>
-                            
+    <div id="panier-vide" style="display: block;">
+        <p>Votre panier est vide !</p>
+    </div>
     
-
-                    <div id="Sectionpanier">
-                        <p id="panierVide">Votre panier est vide</p>
-                    </div>
-                </div>
-
-
-                <div class="col" id="rightform">
-                    <div id="Sectionformulaire">
-                        <p>IDENTIFICATION</p>
-                        
-                        <form method="post" onsubmit="sendCommand(event)" id="formulaire">
-
-                            <!--identite-->
-
-                            <fieldset> 
-                                <legend>Civilité</legend>
-                                <div class="row identité">
-                                    <label for="Nomform" class="labelform">Nom : </label>
-                                    <input type="text" id="Nomform" name="Nomform" placeholder="Nom"   required>
-                                </div>
-                                <div class="row identité">
-                                    <label for="Prénom" class="labelform">Prénom : </label>
-                                    <input type="text" name="Prénom" id="Prénom" placeholder="Prénom" pattern="[a-zA-Z0-9]+" minlength="" required>
-                                </div>
-                                <div class="row identité">
-                                    <label for="Email" class="labelform">E-mail : </label>
-                                    <input type="email" name="Email" id="Email" placeholder="Email" pattern="[^ @]*@[^ @]*" required>
-                                </div>
-                            </fieldset>
-
-                            <!--Adresse de facturation-->
-
-                            <fieldset class="facturation"> 
-                                <legend>Facturation</legend>
-                                <div class="row identité">
-                                    <label for="Adresse" class="labelform">Adresse :</label>
-                                    <input type="text" name="Adresse" id="Adresse" placeholder="Adresse" required>
-                                </div>
-                                <div class="row identité">
-                                    <label for="Ville" class="labelform">Ville :</label>
-                                    <input type="text" name="Ville" id="Ville" placeholder="Ville" required>
-                                </div>
-                                <div class=" row identité">
-                                    <label for="Codepostal" class="labelform">Code postal :</label>
-                                    <input type="number" name="Codepostal" id="Codepostal" placeholder="Code postal" required>
-                                </div>
-                            </fieldset>
-                            <button type="submit" class="btn" id="formbutton">PAYER</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-      <!--footer-->
-
-      <footer id="footer" class="container-fluid mt-auto bg-orinoco">
-        <div class="row p-2 my-1">
-          <div class="col-12">
-            <div class="text-center my-auto">
+    <div class="return">
+        <a href="index.html">Cliquez ici pour poursuivre vos achats</a>   
+    </div>
     
-                <!--infos entreprise-->
-
-              <a href="#" class="text-decoration-none text-body">À propos de nous</a>
-              <span class="mx-2">.</span>
-              <a href="#" class="text-decoration-none text-body">Confidentialité</a>
-              <span class="mx-2">.</span>
-              <a href="#" class="text-decoration-none text-body">Conditions Générales</a>
-            </div>
-          </div>
-      </footer>
-
 </main>
 
-</body>
+<div>
+    <p class="info"> Remplissez le formulaire ci-dessous afin de pouvoir passer votre commande</p>
+    <form id="myForm">
+      <br>
+        <input type="text" id="firstName" name="firstName" placeholder="Prénom" required="">
+        <br>
+        <input type="text" id="lastName" name="lastName" placeholder="Nom" required="">
+        <br>
+        <input type="text" id="city" name="city" placeholder="Ville" required="">
+        <br>
+        <input type="text" id="address" name="address" placeholder="Code Postal" pattern="[0-9]{5}" title="Il faut une série de 5 chiffres" required="">
+        <br>
+        <input type="email" id="email" name="email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="">
+        <br>
+        <button id="boutton-commande">COMMANDEZ</button>
+    </form>
+</div>
 
+  <!--essaie-->
+
+  <!--main-->
+
+   <!--  <article>
+      <h2>Votre produit</h2>
+        <img class="produit__img" src="" alt="Teddy bears">
+          <div>
+            <h3 class="produit__name"></h3>
+              <p class="produit__description"></p>
+              <p>Prix à l'unité : <span class="produit__price"></span></p>
+              <form id="myForm" action="/frontend/confirmation.html" method="POST">
+                <label for="colors">Choississez votre couleur</label>
+                <select name="colors" id="colors" class="produit__choice" form="myForm"></select>
+                <br>
+                <label for="inputNumber">Indiquez la quantité souhaitée </label>
+                <input name="inputNumber" id="inputNumber" type="number" min="0" max="20" placeholder="0" onchange="totalPrice(value)">
+                <input id="submitBtn" type="submit" value="Ajoutez au panier">
+              </form>
+              <p>Prix total: <span class="produit__total">0</span>cents</p>
+          </div>
+    </article> -->
+
+      
+   <!--  <div class="container" id="panier">
+      <div class="row">
+          <div class="col">
+              <h1 class="text-center">Votre panier</h1>
+          </div>
+      </div>
+      <div class="alert bg-orinoco alert-dismissible fade show" role="alert">
+        <strong class="errors"></strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="row text-center" id="mainform">
+        <div class="col" id="leftform">
+          <div id="Sectionpanier">              
+            <table class="table"> -->
+              <!--affichage du panier-->
+              <!-- <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Lense</th>
+                  <th scope="col">Quantité</th>
+                  <th scope="col">Prix</th>
+                  <th scope="col">&#10008;</th>
+                </tr>
+                <tbody class="Rowsarticle"></tbody>
+                <tfoot><th class="tableauFooterLigne" colspan="4">Prix total: 0 euros</th></tfoot>
+              </thead>
+            </table>
+
+            <div id="Sectionpanier">
+              <p id="panierVide">Votre panier est vide</p>
+            </div>
+
+            <div class="col" id="rightform">
+              <div id="Sectionformulaire">
+                <p>IDENTIFICATION</p>          
+                  <form method="post" onsubmit="sendCommand(event)" id="formulaire"> -->
+                    <!--identite-->
+                   <!--  <fieldset> 
+                      <legend>Civilité</legend>
+                        <div class="row identité">
+                          <label for="Nomform" class="labelform">Nom : </label>
+                          <input type="text" id="Nomform" name="Nomform" placeholder="Nom" required>
+                        </div>
+                        <div class="row identité">
+                          <label for="Prénom" class="labelform">Prénom : </label>
+                          <input type="text" name="Prénom" id="Prénom" placeholder="Prénom" pattern="[a-zA-Z0-9]+" minlength="" required>
+                        </div>
+                        <div class="row identité">                              
+                          <label for="Email" class="labelform">E-mail : </label>
+                          <input type="email" name="Email" id="Email" placeholder="Email" pattern="[^ @]*@[^ @]*" required>
+                        </div>
+                    </fieldset> -->
+
+                    <!--Adresse de facturation-->
+                    <!-- <fieldset class="facturation"> 
+                      <legend>Facturation</legend>
+                        <div class="row identité">
+                          <label for="Adresse" class="labelform">Adresse :</label>
+                          <input type="text" name="Adresse" id="Adresse" placeholder="Adresse" required>
+                        </div>
+                        <div class="row identité">
+                          <label for="Ville" class="labelform">Ville :</label>
+                          <input type="text" name="Ville" id="Ville" placeholder="Ville" required>
+                        </div>
+                        <div class=" row identité">
+                          <label for="Codepostal" class="labelform">Code postal :</label>
+                          <input type="number" name="Codepostal" id="Codepostal" placeholder="Code postal" required>
+                        </div>
+                    </fieldset>
+                      <button type="submit" class="btn" id="formbutton">COMMANDEZ</button>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main> -->
+
+  <!--footer-->
+  <footer id="footer" class="container-fluid mt-auto bg-orinoco">
+    <div class="row p-2 my-1">
+      <div class="col-12">
+        <div class="text-center my-auto">
+          <!--infos entreprise-->
+          <a href="#" class="text-decoration-none text-body">À propos de nous</a>
+          <span class="mx-2">.</span>
+          <a href="#" class="text-decoration-none text-body">Confidentialité</a>
+          <span class="mx-2">.</span>
+          <a href="#" class="text-decoration-none text-body">Conditions Générales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="JS/panier.js"></script>
+
+</body>
 </html>
