@@ -1,9 +1,9 @@
 const express = require('express');
 const path = require('path');
 
-const cameraRoutes = require('./backend/routes/camera');
+const cameraRoutes = require('./routes/camera');
 const teddyRoutes = require('./routes/teddy');
-const furnitureRoutes = require('./backend/routes/furniture');
+const furnitureRoutes = require('./routes/furniture');
 
 const app = express();
 
