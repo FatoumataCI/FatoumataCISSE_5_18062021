@@ -47,7 +47,6 @@
   </header>
 
   <!--main-->
-  <!--essaie-->
 
   <main>
 
@@ -60,132 +59,42 @@
     <div class="return">
         <a href="index.html">Cliquez ici pour poursuivre vos achats</a>   
     </div>
-    
-</main>
-
-<div>
-    <p class="info"> Remplissez le formulaire ci-dessous afin de pouvoir passer votre commande</p>
+  </main>
+  <div>
+    <p class="info"> <strong>Identification de commande</strong></p>
     <form id="myForm">
-      <br>
+      
+      <div class="row identité">
+        <label for="firstName" class="labelform">Prenom : </label>
         <input type="text" id="firstName" name="firstName" placeholder="Prénom" required="">
         <br>
+      </div>
+      <div class="row identité">
+        <label for="lastName" class="labelform">Nom : </label>
         <input type="text" id="lastName" name="lastName" placeholder="Nom" required="">
         <br>
+      </div>
+      
+      <div class="row identité">
+          <label for="city" class="labelform">Ville : </label>
         <input type="text" id="city" name="city" placeholder="Ville" required="">
         <br>
+      </div>
+      <div class="row identité">
+        <label for="address" class="labelform">adresse : </label>
         <input type="text" id="address" name="address" placeholder="Code Postal" pattern="[0-9]{5}" title="Il faut une série de 5 chiffres" required="">
         <br>
-        <input type="email" id="email" name="email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="">
+      </div>
+      <div class="row identité">
+        <label for="email" class="labelform">email: </label>
+        <input type="email" id="email" name="email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required=""><br>
         <br>
-        <button id="boutton-commande">COMMANDEZ</button>
-    </form>
-</div>
-
-  <!--essaie-->
-
-  <!--main-->
-
-   <!--  <article>
-      <h2>Votre produit</h2>
-        <img class="produit__img" src="" alt="Teddy bears">
-          <div>
-            <h3 class="produit__name"></h3>
-              <p class="produit__description"></p>
-              <p>Prix à l'unité : <span class="produit__price"></span></p>
-              <form id="myForm" action="/frontend/confirmation.html" method="POST">
-                <label for="colors">Choississez votre couleur</label>
-                <select name="colors" id="colors" class="produit__choice" form="myForm"></select>
-                <br>
-                <label for="inputNumber">Indiquez la quantité souhaitée </label>
-                <input name="inputNumber" id="inputNumber" type="number" min="0" max="20" placeholder="0" onchange="totalPrice(value)">
-                <input id="submitBtn" type="submit" value="Ajoutez au panier">
-              </form>
-              <p>Prix total: <span class="produit__total">0</span>cents</p>
-          </div>
-    </article> -->
-
+      </div>
       
-   <!--  <div class="container" id="panier">
-      <div class="row">
-          <div class="col">
-              <h1 class="text-center">Votre panier</h1>
-          </div>
-      </div>
-      <div class="alert bg-orinoco alert-dismissible fade show" role="alert">
-        <strong class="errors"></strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="row text-center" id="mainform">
-        <div class="col" id="leftform">
-          <div id="Sectionpanier">              
-            <table class="table"> -->
-              <!--affichage du panier-->
-              <!-- <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nom</th>
-                  <th scope="col">Lense</th>
-                  <th scope="col">Quantité</th>
-                  <th scope="col">Prix</th>
-                  <th scope="col">&#10008;</th>
-                </tr>
-                <tbody class="Rowsarticle"></tbody>
-                <tfoot><th class="tableauFooterLigne" colspan="4">Prix total: 0 euros</th></tfoot>
-              </thead>
-            </table>
-
-            <div id="Sectionpanier">
-              <p id="panierVide">Votre panier est vide</p>
-            </div>
-
-            <div class="col" id="rightform">
-              <div id="Sectionformulaire">
-                <p>IDENTIFICATION</p>          
-                  <form method="post" onsubmit="sendCommand(event)" id="formulaire"> -->
-                    <!--identite-->
-                   <!--  <fieldset> 
-                      <legend>Civilité</legend>
-                        <div class="row identité">
-                          <label for="Nomform" class="labelform">Nom : </label>
-                          <input type="text" id="Nomform" name="Nomform" placeholder="Nom" required>
-                        </div>
-                        <div class="row identité">
-                          <label for="Prénom" class="labelform">Prénom : </label>
-                          <input type="text" name="Prénom" id="Prénom" placeholder="Prénom" pattern="[a-zA-Z0-9]+" minlength="" required>
-                        </div>
-                        <div class="row identité">                              
-                          <label for="Email" class="labelform">E-mail : </label>
-                          <input type="email" name="Email" id="Email" placeholder="Email" pattern="[^ @]*@[^ @]*" required>
-                        </div>
-                    </fieldset> -->
-
-                    <!--Adresse de facturation-->
-                    <!-- <fieldset class="facturation"> 
-                      <legend>Facturation</legend>
-                        <div class="row identité">
-                          <label for="Adresse" class="labelform">Adresse :</label>
-                          <input type="text" name="Adresse" id="Adresse" placeholder="Adresse" required>
-                        </div>
-                        <div class="row identité">
-                          <label for="Ville" class="labelform">Ville :</label>
-                          <input type="text" name="Ville" id="Ville" placeholder="Ville" required>
-                        </div>
-                        <div class=" row identité">
-                          <label for="Codepostal" class="labelform">Code postal :</label>
-                          <input type="number" name="Codepostal" id="Codepostal" placeholder="Code postal" required>
-                        </div>
-                    </fieldset>
-                      <button type="submit" class="btn" id="formbutton">COMMANDEZ</button>
-                  </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main> -->
+        <br><button id="boutton-commande">COMMANDEZ</button>
+      
+    </form>
+  </div>
 
   <!--footer-->
   <footer id="footer" class="container-fluid mt-auto bg-orinoco">
