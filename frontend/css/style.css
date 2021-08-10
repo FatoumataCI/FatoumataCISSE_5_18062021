@@ -28,8 +28,12 @@ h1{
     display: flex;
     flex-direction: column;
     margin: 20px;
+    cursor: pointer;
 }
 
+.card:hover{
+color:blue;
+}
 .card-img-top{
     height: 150px;
     display: flex;
@@ -63,4 +67,21 @@ h1{
 
 .article__img {
     width: 300px;
+}
+
+main {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+#myForm {
+    display: inline-block;
+}
+
+#footer {
+    bottom: -80px;
+    position: relative;
 }
