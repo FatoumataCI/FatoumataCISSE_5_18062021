@@ -10,6 +10,7 @@ data.products.forEach(elt => {
 });
 
 // Display sur le html du numéro de commande et du prix total des articles (prix divisé par 100)
+document.getElementById('nameCommande').innerHTML = data.nameCommande;
 document.getElementById('orderId').innerHTML = data.orderId;
 document.getElementById('totalPrice').innerHTML = totalPrice/100;
 
