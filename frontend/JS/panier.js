@@ -106,7 +106,6 @@ document.querySelector('#boutton-commande').addEventListener('click', (e) => {
     }
     console.log(data)
 
-
     // Si le panier est vide on stop la commande
     if (!panier) {
            alert("la commande ne peut pas être passée car le panier est vide");
