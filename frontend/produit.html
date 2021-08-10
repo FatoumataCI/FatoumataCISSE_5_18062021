@@ -46,11 +46,13 @@
         </div>
       </nav>
     </header>
-
+    
     <!--main-->
     <main class="main__produit">
 
       <h2 class="title">Produit en stock</h2>
+
+      
       <article class="produit">
         <img class="produit__img" src="" alt="Teddy bears">
         <div>
@@ -59,13 +61,13 @@
           <p>Prix à l'unité : <span class="produit__price"></span>€</p>
             <div id="myForm">
               <label for="colors">Choississez votre couleur</label>
-              <select name="colors" id="colors" class="produit__choice" form="myForm"></select>
+              <br><select name="colors" id="colors" class="produit__choice" form="myForm"></select>
               <br>
-              <label for="inputNumber">Indiquez la quantité souhaitée </label>
-              <input name="inputNumber" id="inputNumber" type="number" min="0" max="20" placeholder="0" onchange="totalPrice(value)">
-              <button id="submitBtn">Ajoutez au panier</button>
+              <label for="inputNumber">Quantité</label>
+              <input name="inputNumber" id="inputNumber" type="number" min="0" max="20" placeholder="0" onchange="totalPrice(value)"><br>
+              <br><button id="submitBtn" class="btn btn-primary">Ajoutez au panier</button>
             </div>
-            <p>Prix total: <span class="produit__total">0</span>€</p>
+            <br><p>Prix total: <span class="produit__total">0</span>€</p><br>
         </div>
       </article>
     </main>
